@@ -1,0 +1,9 @@
+W:\opensource\c_sharp\desktop\WordTalker\WordTalker\bin\Debug\WordTalker.exe.config
+W:\opensource\c_sharp\desktop\WordTalker\WordTalker\bin\Debug\WordTalker.exe
+W:\opensource\c_sharp\desktop\WordTalker\WordTalker\bin\Debug\WordTalker.pdb
+W:\opensource\c_sharp\desktop\WordTalker\WordTalker\obj\Debug\WordTalker.csprojResolveAssemblyReference.cache
+W:\opensource\c_sharp\desktop\WordTalker\WordTalker\obj\Debug\WordTalker.Form1.resources
+W:\opensource\c_sharp\desktop\WordTalker\WordTalker\obj\Debug\WordTalker.Properties.Resources.resources
+W:\opensource\c_sharp\desktop\WordTalker\WordTalker\obj\Debug\WordTalker.csproj.GenerateResource.Cache
+W:\opensource\c_sharp\desktop\WordTalker\WordTalker\obj\Debug\WordTalker.exe
+W:\opensource\c_sharp\desktop\WordTalker\WordTalker\obj\Debug\WordTalker.pdb

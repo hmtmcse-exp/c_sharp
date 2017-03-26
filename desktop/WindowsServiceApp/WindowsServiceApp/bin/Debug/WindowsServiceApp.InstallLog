@@ -1,0 +1,13 @@
+﻿Installing assembly 'W:\opensource\c_sharp\desktop\WindowsServiceApp\WindowsServiceApp\bin\Debug\WindowsServiceApp.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = W:\opensource\c_sharp\desktop\WindowsServiceApp\WindowsServiceApp\bin\Debug\WindowsServiceApp.InstallLog
+   assemblypath = W:\opensource\c_sharp\desktop\WindowsServiceApp\WindowsServiceApp\bin\Debug\WindowsServiceApp.exe
+Installing service Windows Service App Test...
+Service Windows Service App Test has been successfully installed.
+Creating EventLog source Windows Service App Test in log Application...
+Committing assembly 'W:\opensource\c_sharp\desktop\WindowsServiceApp\WindowsServiceApp\bin\Debug\WindowsServiceApp.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = W:\opensource\c_sharp\desktop\WindowsServiceApp\WindowsServiceApp\bin\Debug\WindowsServiceApp.InstallLog
+   assemblypath = W:\opensource\c_sharp\desktop\WindowsServiceApp\WindowsServiceApp\bin\Debug\WindowsServiceApp.exe

@@ -35,6 +35,7 @@
             this.englishWord = new System.Windows.Forms.Label();
             this.banglaMeaning = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.startLine = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,11 +114,20 @@
             this.comboBox1.TabIndex = 5;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // startLine
+            // 
+            this.startLine.Location = new System.Drawing.Point(415, 37);
+            this.startLine.Name = "startLine";
+            this.startLine.Size = new System.Drawing.Size(100, 20);
+            this.startLine.TabIndex = 6;
+            this.startLine.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1224, 513);
+            this.Controls.Add(this.startLine);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.banglaMeaning);
             this.Controls.Add(this.englishWord);
@@ -142,6 +152,7 @@
         private System.Windows.Forms.Label englishWord;
         private System.Windows.Forms.Label banglaMeaning;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox startLine;
     }
 }
 

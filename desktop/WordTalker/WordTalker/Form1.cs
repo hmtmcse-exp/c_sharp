@@ -85,6 +85,7 @@ namespace WordTalker
             {
                 this.englishWord.Text = pullValue("english", index);
                 lastIndex = index;
+                startLine.Text = lastIndex + "";
             }
 
             if (this.banglaMeaning.InvokeRequired)
@@ -141,6 +142,10 @@ namespace WordTalker
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if(!startLine.Text.Equals(0))
+            {
+                lastIndex = int.Parse(startLine.Text);
+            }
             loadData();
             if (isStartTalking)
             {

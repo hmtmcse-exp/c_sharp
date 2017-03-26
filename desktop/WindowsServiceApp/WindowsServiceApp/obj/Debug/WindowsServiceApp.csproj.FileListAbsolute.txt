@@ -1,0 +1,8 @@
+W:\opensource\c_sharp\desktop\WindowsServiceApp\WindowsServiceApp\bin\Debug\WindowsServiceApp.exe.config
+W:\opensource\c_sharp\desktop\WindowsServiceApp\WindowsServiceApp\bin\Debug\WindowsServiceApp.exe
+W:\opensource\c_sharp\desktop\WindowsServiceApp\WindowsServiceApp\bin\Debug\WindowsServiceApp.pdb
+W:\opensource\c_sharp\desktop\WindowsServiceApp\WindowsServiceApp\obj\Debug\WindowsServiceApp.csprojResolveAssemblyReference.cache
+W:\opensource\c_sharp\desktop\WindowsServiceApp\WindowsServiceApp\obj\Debug\WindowsServiceApp.ProjectInstaller.resources
+W:\opensource\c_sharp\desktop\WindowsServiceApp\WindowsServiceApp\obj\Debug\WindowsServiceApp.csproj.GenerateResource.Cache
+W:\opensource\c_sharp\desktop\WindowsServiceApp\WindowsServiceApp\obj\Debug\WindowsServiceApp.exe
+W:\opensource\c_sharp\desktop\WindowsServiceApp\WindowsServiceApp\obj\Debug\WindowsServiceApp.pdb

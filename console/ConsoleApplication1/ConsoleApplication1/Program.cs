@@ -15,9 +15,11 @@ namespace ConsoleApplication1
             HTTPRequester httpRequester = new HTTPRequester();
             ResponseData  responseData = httpRequester.GET("https://www.google.com/");
 
-            Console.WriteLine(responseData.statusCode);
-            Console.WriteLine(responseData.content);
+            //Console.WriteLine(responseData.statusCode);
+            //Console.WriteLine(responseData.content);
 
+            DateTime thisDate1 = DateTime.Today;
+            Console.WriteLine("Today is " + thisDate1.ToString("d-M-yyyy") + ".");
 
 
 

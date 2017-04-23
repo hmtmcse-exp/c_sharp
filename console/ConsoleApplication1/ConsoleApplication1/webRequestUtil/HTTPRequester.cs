@@ -26,9 +26,7 @@ namespace ConsoleApplication1.webRequestUtil
                     webRequest.Headers.Add(entry.Key, entry.Value);
                 }
             }
-            
             webRequest.ContentType = ContentType;
-
             if (method == null)
             {
                 webRequest.Method = GET_REQUEST;
@@ -58,9 +56,10 @@ namespace ConsoleApplication1.webRequestUtil
             return responseData;
         }
 
+
         public ResponseData GET(string url)
         {
-            return this.request(url, null, null, null);
+            return this.request(url, null, GET_REQUEST, null);
         }
 
     }

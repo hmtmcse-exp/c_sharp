@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="webRequestUtil\HTTPRequester.cs" />
     <Compile Include="webRequestUtil\ResponseData.cs" />
-    <Compile Include="MyWebRequest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -30,6 +30,13 @@ namespace ScaffoldGenerator
             listView1.Columns.Add("Error Message");
             listView1.Columns.Add("Data Type");
             listView1.Columns.Add("Name");
+
+            dataType.DropDownStyle = ComboBoxStyle.DropDownList;
+            dataType.Items.Add("string");
+            dataType.Items.Add("int");
+            dataType.Items.Add("string");
+            dataType.Items.Add("string");
+            dataType.Items.Add("string");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -101,6 +108,16 @@ namespace ScaffoldGenerator
         private void Clear(object sender, EventArgs e)
         {
             clearAllText();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

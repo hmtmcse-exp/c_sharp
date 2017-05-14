@@ -22,7 +22,7 @@ namespace UIBrowser
             OpenFileDialog x = new OpenFileDialog();
 
             x.DefaultExt = "ttf";
-            x.Filter = "ttf files (*.ttf)|*.ttf";
+            x.Filter = "Fonts (*.ttf,*.otf)|*.ttf;*.otf";
             x.Multiselect = true;
             x.ShowDialog();
             string[] result = x.FileNames;

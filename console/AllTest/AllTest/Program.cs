@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace AllTest
 {
@@ -12,6 +13,25 @@ namespace AllTest
         //[STAThreadAttribute]
         static void Main(string[] args)
         {
+
+            string password = "abcd1234";
+
+            AppAESEncryptDecrypt appAESEncryptDecrypt = new AppAESEncryptDecrypt();
+            var output = appAESEncryptDecrypt.EncryptText("Touhid", password);
+            Console.WriteLine(output);
+
+            output = appAESEncryptDecrypt.DecryptText(output, password);
+            Console.WriteLine(output);
+
+            //Process p = new Process();
+            //p.StartInfo = new ProcessStartInfo(@"F:\codes\miscelaneous\os_sapuria\C#\WindowsSAAgent\UserInterface\bin\Release\UserInterface.exe");
+            //p.StartInfo.Verb = "runas";
+            //p.Start();
+
+            //AppWindowsRegistryHelper appWR = new AppWindowsRegistryHelper();
+            //String x = appWR.readLocalMachineKey("Arial (TrueType)");
+            //Console.WriteLine(x);
+
             //Application.Run(new FolderBrowserDialogExampleForm1());
 
             //string[] array1 = Directory.GetFiles(@"C:\");
@@ -78,10 +98,10 @@ namespace AllTest
 
             //List<string> arrHeaders = new List<string>();
 
-            Shell32.Shell shell = new Shell32.Shell();
-            var strFileName = @"C:\Users\touhid\Desktop\fonts\Lato\Lato-Black.ttf";
-            Shell32.Folder objFolder = shell.NameSpace(System.IO.Path.GetDirectoryName(strFileName));
-            Shell32.FolderItem folderItem = objFolder.ParseName(System.IO.Path.GetFileName(strFileName));
+            //Shell32.Shell shell = new Shell32.Shell();
+            //var strFileName = @"C:\Users\touhid\Desktop\fonts\Lato\Lato-Black.ttf";
+            //Shell32.Folder objFolder = shell.NameSpace(System.IO.Path.GetDirectoryName(strFileName));
+            //Shell32.FolderItem folderItem = objFolder.ParseName(System.IO.Path.GetFileName(strFileName));
 
             //for (int i = 0; i < short.MaxValue; i++)
             //{
@@ -97,9 +117,9 @@ namespace AllTest
             //    Console.WriteLine(arrHeaders[i] + " " + i + " :" + objFolder.GetDetailsOf(folderItem, i));
             //}
 
-            Console.WriteLine("Title: " + objFolder.GetDetailsOf(folderItem, 21));
-            Console.WriteLine("Type: " + objFolder.GetDetailsOf(folderItem, 2));
-            Console.WriteLine("Authors: " + objFolder.GetDetailsOf(folderItem, 20));
+            //Console.WriteLine("Title: " + objFolder.GetDetailsOf(folderItem, 21));
+            //Console.WriteLine("Type: " + objFolder.GetDetailsOf(folderItem, 2));
+            //Console.WriteLine("Authors: " + objFolder.GetDetailsOf(folderItem, 20));
 
 
             Console.ReadLine();

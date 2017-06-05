@@ -8,5 +8,6 @@ namespace ScaffoldGenerator.DotnetCore
 {
     class FormInpuGenerator
     {
+
     }
 }

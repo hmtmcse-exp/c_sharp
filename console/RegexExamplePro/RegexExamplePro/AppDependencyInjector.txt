@@ -1,0 +1,14 @@
+using MiaISoftMasterApp.Interfaces;
+using MiaISoftMasterApp.Services.IImplement;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace MiaISoftMasterApp.AppContext
+{
+    public class AppDependencyInjector
+    {
+        public static void Inject(IServiceCollection services)
+        {
+            services.AddTransient<IOrganizerService, OrganizerService>();
+        }
+    }
+}

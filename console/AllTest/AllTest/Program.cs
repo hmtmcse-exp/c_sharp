@@ -3,16 +3,54 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
+using SimpleImpersonation;
+using System.Security.Principal;
 
 namespace AllTest
 {
     class Program
     {
 
+
+        public static bool IsAdministrator()
+        {
+            WindowsIdentity identity = WindowsIdentity.GetCurrent();
+            WindowsPrincipal principal = new WindowsPrincipal(identity);
+            return principal.IsInRole(WindowsBuiltInRole.Administrator);
+        }
+
+
+
         [STAThread]
         //[STAThreadAttribute]
         static void Main(string[] args)
         {
+
+
+            if (IsAdministrator())
+            {
+                Console.WriteLine("Yes");
+            }
+            else
+            {
+                Console.WriteLine("No");
+            }
+
+           
+
+            using (Impersonation.LogonUser("BM-PC-37", "localadmin", "Test123#", LogonType.Interactive))
+            {
+                if (IsAdministrator())
+                {
+                    Console.WriteLine("Yes");
+                }
+                else
+                {
+                    Console.WriteLine("No");
+                }
+            }
+
+            Console.ReadLine();
 
             string password = "abcd1234";
 
@@ -122,7 +160,7 @@ namespace AllTest
             //Console.WriteLine("Authors: " + objFolder.GetDetailsOf(folderItem, 20));
 
 
-            Console.ReadLine();
+           // Console.ReadLine();
 
 
 

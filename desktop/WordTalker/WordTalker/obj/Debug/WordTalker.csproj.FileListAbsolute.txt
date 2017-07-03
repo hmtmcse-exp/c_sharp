@@ -7,3 +7,6 @@ W:\opensource\c_sharp\desktop\WordTalker\WordTalker\obj\Debug\WordTalker.Propert
 W:\opensource\c_sharp\desktop\WordTalker\WordTalker\obj\Debug\WordTalker.csproj.GenerateResource.Cache
 W:\opensource\c_sharp\desktop\WordTalker\WordTalker\obj\Debug\WordTalker.exe
 W:\opensource\c_sharp\desktop\WordTalker\WordTalker\obj\Debug\WordTalker.pdb
+F:\touhid\c_sharp\desktop\WordTalker\WordTalker\bin\Debug\WordTalker.exe.config
+F:\touhid\c_sharp\desktop\WordTalker\WordTalker\obj\Debug\WordTalker.exe
+F:\touhid\c_sharp\desktop\WordTalker\WordTalker\obj\Debug\WordTalker.pdb

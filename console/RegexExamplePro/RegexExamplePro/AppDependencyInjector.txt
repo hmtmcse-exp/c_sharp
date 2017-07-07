@@ -6,7 +6,7 @@ namespace MiaISoftMasterApp.AppContext
 {
     public class AppDependencyInjector
     {
-        public static void Inject(IServiceCollection services)
+        public static void Inject(IServiceCollection services)     
         {
             services.AddTransient<IOrganizerService, OrganizerService>();
         }

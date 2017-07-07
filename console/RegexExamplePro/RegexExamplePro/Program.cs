@@ -14,8 +14,10 @@ namespace RegexExamplePro
             var textLoc = Path.Combine(location, "AppDependencyInjector.txt");
             var text = File.ReadAllText(textLoc);
             //Console.WriteLine(text);
-            
-            string newString = Regex.Replace(text, "public static void Inject(IServiceCollection services)", "<td>${0}</td>");
+
+            string replaceBy = "public static void Inject(IServiceCollection services)\n        {\n            ";
+            replaceBy += "services.AddTransient<IOrganizerService, OrganizerService>();";
+            string newString = Regex.Replace(text, "public static void Inject\\(IServiceCollection services\\)\\s*{", replaceBy);
             Console.WriteLine(newString);
 
         }

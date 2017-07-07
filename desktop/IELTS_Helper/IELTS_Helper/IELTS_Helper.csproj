@@ -37,6 +37,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.105.2, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\System.Data.SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,6 +60,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\Database\SQLiteConnectionManager.cs" />
+    <Compile Include="Service\Database\SQLiteSQLQueryHelper.cs" />
     <EmbeddedResource Include="IELTS.resx">
       <DependentUpon>IELTS.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +119,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="libs\System.Data.SQLite.dll" />
     <Content Include="notes.txt" />
     <Content Include="Resources\Database\empty.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

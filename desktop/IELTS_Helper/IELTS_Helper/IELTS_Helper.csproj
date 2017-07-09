@@ -71,6 +71,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\AppConstant.cs" />
+    <Compile Include="Service\NoteService.cs" />
+    <Compile Include="ViewModel\NoteModel.cs" />
     <EmbeddedResource Include="IELTS.resx">
       <DependentUpon>IELTS.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,9 +140,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Service\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>

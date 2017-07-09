@@ -1,4 +1,5 @@
 ﻿using IELTS_Helper.Database;
+using IELTS_Helper.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,20 +31,7 @@ namespace IELTS_Helper
             introWeb.DocumentText = result;
 
 
-            try
-            {
-                SQLiteSQLQueryHelper sqLiteSQLQueryHelper = new SQLiteSQLQueryHelper();
-                SQLiteDataReader reader = sqLiteSQLQueryHelper.Select("word", "*", "");
 
-                while (reader.Read())
-                {
-                    Console.WriteLine(reader["en"].ToString());
-                }
-            }
-            catch(SQLiteException sql)
-            {
-                
-            }
 
             
         }
@@ -84,16 +72,11 @@ namespace IELTS_Helper
         {
             if (introduction.SelectedTab.Name == "reading")
             {
-               
-                List<dynamic> dynList = new List<dynamic>() {
-            new {Id = 1, Name = "Elevator", Company="Vertical Pop" },
-            new {Id = 2, Name = "Stairs", Company="Fitness" }
-};
 
-                listBox1.DataSource = dynList;
-                listBox1.DisplayMember = "Name";
+                NoteService noteService = new NoteService();
+                listBox1.DataSource = noteService.GetNotesByGroupName(AppConstant.READING);
+                listBox1.DisplayMember = "DisplayName";
                 listBox1.ValueMember = "Id";
-
             }
 
             Console.WriteLine(introduction.SelectedTab.Name);

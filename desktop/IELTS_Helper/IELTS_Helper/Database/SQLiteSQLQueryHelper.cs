@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IELTS_Helper.Service.Database
+namespace IELTS_Helper.Database
 {
-    class SQLiteSQLQueryHelper : SQLiteConnectionManager
+    public class SQLiteSQLQueryHelper : SQLiteConnectionManager
     {
 
         public SQLiteSQLQueryHelper() : base()
         {
-           
+
         }
 
         public void InsertInto(String table, String column, String values)

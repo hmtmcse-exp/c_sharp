@@ -5,15 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IELTS_Helper.Service.Database
+namespace IELTS_Helper.Database
 {
-    class SQLiteConnectionManager
+    public class SQLiteConnectionManager
     {
         public SQLiteConnection sqLiteConnection;
         public SQLiteCommand sqLiteCommand;
         public static string DB_NAME = "Resources/Database/word_note.db";
         public readonly string DB_CONNECTION = "Data Source=" + DB_NAME + ";Version=3;New=False;Compress=True;";
-        
+
 
         public SQLiteConnectionManager()
         {
@@ -30,9 +30,7 @@ namespace IELTS_Helper.Service.Database
 
         private void CloseConnection()
         {
-            sqLiteConnection.Close();            
+            sqLiteConnection.Close();
         }
-
-
     }
 }

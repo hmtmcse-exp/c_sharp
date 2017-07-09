@@ -11,8 +11,8 @@ namespace IELTS_Helper.Database
     {
         public SQLiteConnection sqLiteConnection;
         public SQLiteCommand sqLiteCommand;
-        public static string DB_NAME = "Resources/Database/word_note.db";
-        public readonly string DB_CONNECTION = "Data Source=" + DB_NAME + ";Version=3;New=False;Compress=True;";
+        public static string DB_NAME = "Resources/Database/word_book.db";
+        public readonly string DB_CONNECTION = "Data Source=" + DB_NAME + ";Version=3; FailIfMissing=True; Foreign Keys=True;";
 
 
         public SQLiteConnectionManager()
@@ -31,6 +31,32 @@ namespace IELTS_Helper.Database
         private void CloseConnection()
         {
             sqLiteConnection.Close();
+        }
+
+        public void test()
+        {
+            try
+            {
+                using (SQLiteConnection conn = new SQLiteConnection(DB_CONNECTION))
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM word ";
+                    using (SQLiteCommand cmd = new SQLiteCommand(sql, conn))
+                    {
+                        using (SQLiteDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                reader["en"].ToString();
+                            }
+                        }
+                    }
+                    conn.Close();
+                }
+            }
+            catch (SQLiteException e)
+            {
+            }
         }
     }
 }

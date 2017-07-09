@@ -1,7 +1,9 @@
-﻿using System;
+﻿using IELTS_Helper.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -26,6 +28,24 @@ namespace IELTS_Helper
         {
             var result = CommonMark.CommonMarkConverter.Convert("**Hello world!**");
             introWeb.DocumentText = result;
+
+
+            try
+            {
+                SQLiteSQLQueryHelper sqLiteSQLQueryHelper = new SQLiteSQLQueryHelper();
+                SQLiteDataReader reader = sqLiteSQLQueryHelper.Select("word", "*", "");
+
+                while (reader.Read())
+                {
+                    Console.WriteLine(reader["en"].ToString());
+                }
+            }
+            catch(SQLiteException sql)
+            {
+                
+            }
+
+            
         }
     }
 }

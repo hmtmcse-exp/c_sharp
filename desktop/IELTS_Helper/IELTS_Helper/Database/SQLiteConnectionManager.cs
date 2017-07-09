@@ -32,31 +32,6 @@ namespace IELTS_Helper.Database
         {
             sqLiteConnection.Close();
         }
-
-        public void test()
-        {
-            try
-            {
-                using (SQLiteConnection conn = new SQLiteConnection(DB_CONNECTION))
-                {
-                    conn.Open();
-                    string sql = "SELECT * FROM word ";
-                    using (SQLiteCommand cmd = new SQLiteCommand(sql, conn))
-                    {
-                        using (SQLiteDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                reader["en"].ToString();
-                            }
-                        }
-                    }
-                    conn.Close();
-                }
-            }
-            catch (SQLiteException e)
-            {
-            }
-        }
+        
     }
 }

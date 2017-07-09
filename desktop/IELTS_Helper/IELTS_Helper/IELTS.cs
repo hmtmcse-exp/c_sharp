@@ -47,5 +47,57 @@ namespace IELTS_Helper
 
             
         }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reading_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void introduction_TabIndexChanged(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void introduction_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void introduction_Selected(object sender, TabControlEventArgs e)
+        {
+
+        }
+
+        private void introduction_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (introduction.SelectedTab.Name == "reading")
+            {
+               
+                List<dynamic> dynList = new List<dynamic>() {
+            new {Id = 1, Name = "Elevator", Company="Vertical Pop" },
+            new {Id = 2, Name = "Stairs", Company="Fitness" }
+};
+
+                listBox1.DataSource = dynList;
+                listBox1.DisplayMember = "Name";
+                listBox1.ValueMember = "Id";
+
+            }
+
+            Console.WriteLine(introduction.SelectedTab.Name);
+
+        }
     }
 }

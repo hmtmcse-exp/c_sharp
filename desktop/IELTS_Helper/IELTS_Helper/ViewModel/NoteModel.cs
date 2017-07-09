@@ -12,5 +12,6 @@ namespace IELTS_Helper.ViewModel
         public string NoteGroup { get; set; }
         public int Id { get; set; }
         public string UUUID { get; set; }
+        public string Identifier { get; set; }
     }
 }

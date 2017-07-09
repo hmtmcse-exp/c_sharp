@@ -17,7 +17,7 @@ namespace IELTS_Helper.Service
             try
             {
                 SQLiteSQLQueryHelper sqLiteSQLQueryHelper = new SQLiteSQLQueryHelper();
-                SQLiteDataReader reader = sqLiteSQLQueryHelper.Select("note", "*", "");
+                SQLiteDataReader reader = sqLiteSQLQueryHelper.Select("note", "*", "WHERE note_group='" + groupName + "'");
 
                 NoteModel noteModel;
                 while (reader.Read())
@@ -27,6 +27,7 @@ namespace IELTS_Helper.Service
                     noteModel.UUUID = reader["uuid"].ToString();
                     noteModel.Id = int.Parse(reader["id"].ToString());
                     noteModel.NoteGroup = reader["note_group"].ToString();
+                    noteModel.Identifier = reader["identifier"].ToString();
                     noteLists.Add(noteModel);
                 }
             }

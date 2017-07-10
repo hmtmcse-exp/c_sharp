@@ -77,9 +77,21 @@ namespace IELTS_Helper
                 listBox1.DataSource = noteService.GetNotesByGroupName(AppConstant.READING);
                 listBox1.DisplayMember = "DisplayName";
                 listBox1.ValueMember = "Id";
+                readingWebview.Url = new Uri(@"file://" + System.IO.Directory.GetCurrentDirectory() + @"\Resources\Reading\HTML\1_visual_symbols_and_the_blind.html");
+
             }
 
             Console.WriteLine(introduction.SelectedTab.Name);
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void readingWebview_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
 
         }
     }
